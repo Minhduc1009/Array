@@ -1,0 +1,22 @@
+public static void print(int[] a, int n)
+	{
+		 for (int j = 0; j < n; j++) 
+		    {
+				System.out.print(a[j] + " ");
+			}
+	}
+public static void deleteElement(int[] a,int n, Scanner sc)
+	{
+		int x;
+		do {
+			System.out.print("nhap vi tri muon xoa: ");
+			x = sc.nextInt();
+			if(x < 0 && x >= n) System.out.println("nhap khong hop le!");
+		} while (x < 0 && x >= n);
+		
+	    for(int i=x; i<=n-2; i++)
+	    	a[i] = a[i+1]; //Dịch các phần tử sang trái 1 vị trí
+		 n--; //giam chieu dai di 1 phan tu
+		 System.out.println("mang sau khi xoa phan tu x");
+		 print(a, n);
+	}
