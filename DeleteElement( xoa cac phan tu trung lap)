@@ -1,0 +1,25 @@
+// voi dieu kien array do phai la array tang dan
+
+public class DeleteElement {
+	public static int removeDuplicate(int[] arr, int n)
+	   {  
+	      if(n == 0 || n == 1)
+	      {  
+	         return n;  
+	      }  
+	      int[] arrTemp = new int[n];  
+	      int k = 0;  
+	      for(int a = 0; a < n - 1; a++)
+	      {  
+	         if(arr[a] != arr[a + 1])
+	         {  
+	            arrTemp[k++] = arr[a];  
+	         }  
+	      }  
+	      arrTemp[k++] = arr[n - 1]; 
+	      for(int a = 0; a < k; a++)
+	      {  
+	         arr[a] = arrTemp[a];  
+	      }  
+	      return k;  
+	   }
