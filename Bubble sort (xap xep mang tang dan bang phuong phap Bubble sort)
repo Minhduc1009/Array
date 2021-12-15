@@ -1,0 +1,13 @@
+//xap xep mang tang dan bang phuong phap Bubble sort
+	public static void bubbleSort(int[] a) {
+		for (int i = 0; i < a.length-1; i++) {
+			for (int j = a.length -1; j >= 1; j--) {
+				if(a[j] < a[j-1])
+				{
+					int temp = a[j];
+					a[j] = a[j-1];
+					a[j-1] = temp;
+				}
+			}
+		}
+	}
