@@ -1,0 +1,11 @@
+public static int Test(int[] a, int n)
+	{
+		int check = 1;
+		for (int i = 0; i < a.length; i++) {
+			if(a[i] != a[n-i-1]) 
+			{
+				check = 0;
+			}
+		}
+		return check;
+	}
