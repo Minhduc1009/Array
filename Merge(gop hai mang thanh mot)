@@ -1,0 +1,15 @@
+public static void Merge(int a[],int n,int b[],int m)
+	{
+	 int p=n+m; 
+	 int[] c = new int[p];
+	 for(int i=0;i<p;i++)
+	  {
+	   if(i<n) 
+	     c[i]=a[i];
+	   else c[i]=b[i-n];  
+	  }
+	 for (int i = 0; i < c.length; i++) 
+	 {
+		System.out.print(c[i]+" ");
+	}
+	}
