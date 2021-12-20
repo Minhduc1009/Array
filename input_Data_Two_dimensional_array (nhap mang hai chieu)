@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class InputData {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("nhap so cot: ");
+		int n = sc.nextInt();
+		System.out.println("nhap so dong: ");
+		int m = sc.nextInt();
+		int[][] a = new int[n][m];
+		
+		System.out.println("input data for matrix a: ");
+		for (int i = 0; i < n; i++){
+			for (int j = 0; j < m; j++){
+				System.out.print("a"+"["+i+"]"+"["+j+"]"+"= ");
+				a[i][j] = sc.nextInt();
+			}
+		}
+		System.out.println("Matrix A");
+		for (int i = 0; i < n; i++){
+			for (int j = 0; j < m; j++){
+				System.out.print(a[i][j] +"\t");	
+			}
+			System.out.println("\n");
+		}
+	}
+}
